@@ -58,10 +58,21 @@ class VectorStores(SyncAPIResource):
 
     @cached_property
     def with_raw_response(self) -> VectorStoresWithRawResponse:
+        """
+        This property can be used as a prefix for any HTTP method call to return the
+        the raw response object instead of the parsed content.
+
+        For more information, see https://www.github.com/openai/openai-python#accessing-raw-response-data-eg-headers
+        """
         return VectorStoresWithRawResponse(self)
 
     @cached_property
     def with_streaming_response(self) -> VectorStoresWithStreamingResponse:
+        """
+        An alternative to `.with_raw_response` that doesn't eagerly read the response body.
+
+        For more information, see https://www.github.com/openai/openai-python#with_streaming_response
+        """
         return VectorStoresWithStreamingResponse(self)
 
     def create(
@@ -94,7 +105,7 @@ class VectorStores(SyncAPIResource):
 
           metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
               for storing additional information about the object in a structured format. Keys
-              can be a maximum of 64 characters long and values can be a maxium of 512
+              can be a maximum of 64 characters long and values can be a maximum of 512
               characters long.
 
           name: The name of the vector store.
@@ -182,7 +193,7 @@ class VectorStores(SyncAPIResource):
 
           metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
               for storing additional information about the object in a structured format. Keys
-              can be a maximum of 64 characters long and values can be a maxium of 512
+              can be a maximum of 64 characters long and values can be a maximum of 512
               characters long.
 
           name: The name of the vector store.
@@ -325,10 +336,21 @@ class AsyncVectorStores(AsyncAPIResource):
 
     @cached_property
     def with_raw_response(self) -> AsyncVectorStoresWithRawResponse:
+        """
+        This property can be used as a prefix for any HTTP method call to return the
+        the raw response object instead of the parsed content.
+
+        For more information, see https://www.github.com/openai/openai-python#accessing-raw-response-data-eg-headers
+        """
         return AsyncVectorStoresWithRawResponse(self)
 
     @cached_property
     def with_streaming_response(self) -> AsyncVectorStoresWithStreamingResponse:
+        """
+        An alternative to `.with_raw_response` that doesn't eagerly read the response body.
+
+        For more information, see https://www.github.com/openai/openai-python#with_streaming_response
+        """
         return AsyncVectorStoresWithStreamingResponse(self)
 
     async def create(
@@ -361,7 +383,7 @@ class AsyncVectorStores(AsyncAPIResource):
 
           metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
               for storing additional information about the object in a structured format. Keys
-              can be a maximum of 64 characters long and values can be a maxium of 512
+              can be a maximum of 64 characters long and values can be a maximum of 512
               characters long.
 
           name: The name of the vector store.
@@ -449,7 +471,7 @@ class AsyncVectorStores(AsyncAPIResource):
 
           metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful
               for storing additional information about the object in a structured format. Keys
-              can be a maximum of 64 characters long and values can be a maxium of 512
+              can be a maximum of 64 characters long and values can be a maximum of 512
               characters long.
 
           name: The name of the vector store.
